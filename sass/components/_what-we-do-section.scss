@@ -1,0 +1,40 @@
+.what-we-do-section {
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+
+.works-photo .item {
+  margin-right: 30px;
+  position: relative;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.what-we-do-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  bottom: 0px;
+  min-height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  font-family: Roboto, sans-serif;
+  position: absolute;
+}
+
+.what-we-do-description-text {
+  margin: 0px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  color: var(--secondary-text-color);
+}
+
+.works-photo {
+  display: flex;
+}

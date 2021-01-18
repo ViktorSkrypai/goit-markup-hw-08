@@ -1,0 +1,50 @@
+.social-container {
+  margin-left: 70px;
+}
+
+.join-us {
+  display: inline-flex;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.142px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+  margin-bottom: 20px;
+  font-family: $main-font, sans-serif;
+}
+
+.social-buttons .item {
+  margin-right: 10px;
+}
+
+.social-buttons {
+  display: flex;
+
+  & .item:last-child {
+    margin-right: 0px;
+  }
+}
+
+.social-link {
+  height: 44px;
+  width: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.social-link {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  fill: var(--secondary-text-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}

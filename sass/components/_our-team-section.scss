@@ -1,0 +1,48 @@
+.our-team-section {
+  background-color: var(--secondary-grey-bg-color);
+  padding-top: 95px;
+  padding-bottom: 95px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.our-team {
+  display: flex;
+}
+
+.our-team .item {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.our-team .title {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-family: Roboto, sans-serif;
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+}
+
+.profession {
+  margin-top: 0px;
+  margin-bottom: 16px;
+  font-family: $main-font, sans-serif;
+  font-size: 16px;
+  line-height: 1.18;
+}
+
+.our-team .content {
+  background-color: var(--primary-bg-color);
+
+  text-align: center;
+  padding: 30px;
+
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}

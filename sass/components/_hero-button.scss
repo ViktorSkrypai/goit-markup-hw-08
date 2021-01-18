@@ -1,0 +1,20 @@
+.button-text {
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  font-family: $main-font, sans-serif;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 32px;
+  min-width: 200px;
+
+  cursor: pointer;
+  background-color: var(--accent-color);
+  font-family: inherit;
+  border-radius: 4px;
+  border: none;
+}

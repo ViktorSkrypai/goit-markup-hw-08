@@ -1,13 +1,18 @@
-@import "./utils/vars";
-@import "./base/common";
-@import "./base/normalize";
-@import "./components/container";
-@import "./components/page-header";
-@import "./components/page-logo";
-@import "./components/footer-logo";
-@import "./components/footer-social";
-@import "./components/page-footer";
-@import "./components/portf-buttons";
-@import "./components/portf-works";
-@import "./components/subscribe-button";
-@import "./components/subscribe-form";
+@import "utils/variables";
+@import "utils/visially-hidden";
+@import "utils/container";
+@import "utils/mixins";
+@import "utils/placeholders";
+
+@import "base/common";
+
+@import "components/logo";
+@import "components/menu";
+@import "components/button";
+@import "components/section-title";
+@import "components/social-list";
+
+@import "layout/header";
+@import "layout/portfolio-button";
+@import "layout/works";
+@import "layout/footer";

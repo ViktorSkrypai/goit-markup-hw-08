@@ -1,316 +1,911 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="./css/portfolio.min.css">
-</head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
 
-<body>
-    
-<header class="header">
-    <div class="container nav-adress-container">
+    <link rel="stylesheet" href="./css/portfolio.min.css" />
+  </head>
 
-        <!--Логотип-->
-        <a class="logo" href="./index.html"><span class="web-logo">Web</span>Studio</a>
-        <nav>
-            <!-- Навигация на другие страницы -->
+  <body>
+    <header class="header">
+      <div class="container nav-wrapper">
+        <a href="./index.html" lang="en" class="logo nav-logo link"
+          ><span>Web</span>Studio</a
+        >
+        <div class="menu-container" data-menu>
+          <nav class="main-nav">
             <ul class="site-nav list">
-                <li class="item"><a class="link" href="./index.html" target="_blank">Студия</a></li>
-                <li class="item"><a class="link current" href="./portfolio.html" target="_blank">Портфолио</a></li>
-                <li class="item"><a class="link" href="">Контакты</a></li>
+              <li class="site-nav__item">
+                <a href="./index.html" class="site-nav__link link">Студия</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="./portfolio.html" class="site-nav__link link current"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="site-nav__item">
+                <a href="" class="site-nav__link link">Контакты</a>
+              </li>
             </ul>
-        </nav>
-        <!--Список контактов-->
-        <adress class="adress-container">
-            <ul class="header-adress list">
+          </nav>
 
+          <address class="nav-contacts">
+            <a class="nav-contacts__title" href="mailto:info@devstudio.com">
+              <svg class="contacts-icon" width="16px" height="12px">
+                <use href="./images/icons/sprite.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com</a
+            >
 
-                
-                <li class="item">
-                    <a href="mailto:info@devstudio.com" class="adress-link">
-                        <svg class="nav-svg" width="16" height="12">
-                            <use href="./images/sprites.svg#email">
-                        </svg>info@devstudio.com</a>
-                </li>
-                <li class="item"><a href="tel:++380961111111" class="adress-link">
-                    <svg class="nav-svg" width="16" height="12">
-                        <use href="./images/sprites.svg#smartphone">
-                    </svg>(096) 111 11 11</a></li>
+            <a class="nav-contacts__title" href="tel:+380961111111">
+              <svg class="contacts-icon" width="10px" height="16px">
+                <use href="./images/icons/sprite.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </address>
+        </div>
+        <button type="button" class="menu-button" data-menu-button>
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+            aria-expanded="false"
+          >
+            <use
+              class="icon-menu"
+              href="./images/icons/sprite.svg#icon-menu"
+            ></use>
+            <use
+              class="icon-cross"
+              href="./images/icons/sprite.svg#icon-cross"
+            ></use>
+          </svg>
+        </button>
+      </div>
+    </header>
 
-            </ul>
-        </adress>
-
-    </div>
-</header>
-    
     <main>
-        
-        <section class="works-section">
-            <div class="container">
-                
-            <!--Навигационные кнопки-->
-            <ul class="main-buttons list">
-                <li class="item"><button type="button" class="port-button">
-                <span class="port-button-text">Все</span></button></li>
-                <li class="item"><button type="button" class="port-button">
-                    <span class="port-button-text">Веб-сайты</span></button></li>
-                <li class="item"><button type="button" class="port-button">
-                    <span class="port-button-text">Приложения</span></button></li>
-                <li class="item"><button type="button" class="port-button">
-                    <span class="port-button-text">Дизайн</span></button></li>
-                <li class="item"><button type="button" class="port-button">
-                    <span class="port-button-text">Маркетинг</span></button></li>
-            </ul>
-            
-            
-            <!--Список примеров работ-->
-            <!--<h1>Примеры работ</h1>-->
-            
-                
-            <ul class="wrap-works list">
-                <li class="item">
-
-                    <a class="works-examples" href="/">
-                        <div class="image-conteiner">
-                    <img src="./images/technocrack.jpg" alt="Технокряк" width="370" />
-                    <div class="work-example-text">
-                        Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
-                        шпионажа и атак на защищённые сервера конкурентов.
-                    </div>
-                    </div>
-                <div class="content">
-                    <h2 class="works-title">Технокряк</h2>
-                    <p class="works-description">Веб-сайт</p>
-                </div>
-                    </a>
-                </li>
-
-
-
-                
-                <li class="item">
-                    <a class="works-examples" href="/">
-                    <div class="image-conteiner">
-                        <img src="./images/neworlean.jpg" alt="New orlean" width="370" />
-                        <div class="work-example-text">
-                            Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
-                            шпионажа и атак на защищённые сервера конкурентов.
-                        </div>
-                    </div>
-                <div class="content">
-                    <h2 class="works-title">Постер New Orlean vs Golden Star</h2>
-                    <p class="works-description">Дизайн</p>
-                </div>    
-                </a>
-                </li>
-
-
-                
-                <li class="item">
-                    <a class="works-examples" href="/">
-                    <div class="image-conteiner">
-                        <img src="./images/seafood.jpg" alt="Seafood" width="370" />
-                        <div class="work-example-text">
-                            Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
-                            шпионажа и атак на защищённые сервера конкурентов.
-                        </div>
-                    </div>
-                <div class="content">
-                    <h2 class="works-title">Ресторан Seafood</h2>
-                    <p class="works-description">Приложение</p>
-                </div>    
-                    </a>
-                </li>
-                <li class="item">
-                    <a class="works-examples" href="/">
-                    <div class="image-conteiner">
-                        <img src="./images/prime.jpg" alt="Prima" width="370" />
-                        <div class="work-example-text">
-                            Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
-                            шпионажа и атак на защищённые сервера конкурентов.
-                        </div>
-                    </div>
-                    <div class="content">
-                    <h2 class="works-title">Проект Prime</h2>
-                    <p class="works-description">Маркетинг</p>
-                </div>    
-                    </a>
-                </li>
-                <li class="item">
-                    <a class="works-examples" href="/">
-                    <div class="image-conteiner">
-                        <img src="./images/boxes.jpg" alt="Boxes" width="370" />
-                        <div class="work-example-text">
-                            Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
-                            шпионажа и атак на защищённые сервера конкурентов.
-                        </div>
-                    </div>
-                    <div class="content">
-                    <h2 class="works-title">Проект Boxes</h2>
-                    <p class="works-description">Приложение</p>
-                </div>    
-                    </a>
-                </li>
-                <li class="item">
-                    <a class="works-examples" href="/">
-                    <div class="image-conteiner">
-                        <img src="./images/inspiration.jpg" alt="Inspiration" width="370" />
-                        <div class="work-example-text">
-                            Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
-                            шпионажа и атак на защищённые сервера конкурентов.
-                        </div>
-                    </div>
-                    <div class="content">
-                    <h2 class="works-title">Inspiration has no Borders</h2>
-                    <p class="works-description">Веб-сайт</p>
-                </div>    
-                    </a>
-                </li>
-                <li class="item">
-                    <a class="works-examples" href="/">
-                    <div class="image-conteiner">
-                        <img src="./images/limitededition.jpg" alt="Limited" width="370" />
-                        <div class="work-example-text">
-                            Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
-                            шпионажа и атак на защищённые сервера конкурентов.
-                        </div>
-                    </div>
-                    <div class="content">
-                    <h2 class="works-title">Издание Limited Edition</h2>
-                    <p class="works-description">Дизайн</p>
-                </div>    
-                    </a>
-                </li>
-                <li class="item">
-                    <a class="works-examples" href="/">
-                    <div class="image-conteiner">
-                        <img src="./images/lab.jpg" alt="Lab" width="370" />
-                        <div class="work-example-text">
-                            Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
-                            шпионажа и атак на защищённые сервера конкурентов.
-                        </div>
-                    </div>
-                    <div class="content">
-                    <h2 class="works-title">Проект LAB</h2>
-                    <p class="works-description">Маркетинг</p>
-                </div>    
-                    </a>
-                </li>
-                <li class="item">
-                    <a class="works-examples" href="/">
-                    <div class="image-conteiner">
-                        <img src="./images/growing.jpg" alt="Growing" width="370" />
-                        <div class="work-example-text">
-                            Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
-                            шпионажа и атак на защищённые сервера конкурентов.
-                        </div>
-                    </div>
-                    <div class="content">
-                    <h2 class="works-title">Growing Business</h2>
-                    <p class="works-description">Приложение</p>
-                </div>    
-                    </a>
-                </li>
-            </ul>
-            </div>
-        </section>
-        
-    </main>
-    
-<footer class="footer">
-    <div class="container footer-container">
-
-
-
-        <div>
-            <!--Логотип-->
-            <a class="footer-logo" href="./index.html"><span class="web-logo">Web</span>Studio</a>
-            <!--Список контактов-->
-            <address>
-                <ul class="footer-adress list">
-
-                    <li class="item">
-                        <a href="https://goo.gl/maps/HhLxZeVXFnJHZ4HMA" target="_blank" class="footer-contact-adress">г.
-                            Киев, пр-т Леси Украинки, 26 </a> </li>
-                    <li class="item">
-                        <a href="mailto:info@devstudio.com" class="footer-contact">info@devstudio.com</a>
-                    </li>
-                    <li class="item">
-                        <a href="tel:++380961111111" class="footer-contact">(096) 111-11-11</a>
-                    </li>
-                </ul>
-            </address>
-        </div>
-
-
-
-
-        <div class="social-container">
-            <p> <span class="join-us">присоединяйтесь</span></p>
-            <ul class="social-buttons list">
-                <li class="item">
-                    <a class="social-link" href="http://www.instagram.com" target="blank">
-                        <svg width="20" height="20">
-                            <use href="./images/sprites.svg#instagram">
-                        </svg>
-                    </a>
-                </li>
-                <li class="item">
-                    <a class="social-link" href="http://www.twitter.com" target="blank">
-                        <svg width="20" height="20">
-                            <use href="./images/sprites.svg#twitter">
-                        </svg>
-                    </a>
-                </li>
-                <li class="item">
-                    <a class="social-link" href="http://www.facerbook.com" target="blank">
-                        <svg width="20" height="20">
-                            <use href="./images/sprites.svg#facebook">
-                        </svg>
-                    </a>
-                </li>
-                <li class="item">
-                    <a class="social-link" href="http://www.linkedin.com/" target="blank">
-                        <svg width="20" height="20">
-                            <use href="./images/sprites.svg#linkedin">
-                        </svg>
-                    </a>
-                </li>
-
-            </ul>
-        </div>
-
-        <div class="subscribe-container">
-        
-            <p class="join-us">Подпишитесь на рассылку</p>
-            <form class="subscribe-form">
-                <input type="email" class="subscribe-form-field" name="mail" placeholder="E-mail" />
-        
-        
-                <button type="submit" class="subscribe-button">
-                    <span class="subscribe-button-text">Подписаться</span>
-                    <svg width="24" height="24">
-                        <use href="./images/sprites.svg#telegram">
-                    </svg>
+      <section class="section works">
+        <div class="container">
+          <h1 class="section-title visually-hidden">Наши работы</h1>
+          <div class="portfolio-buttons__wrapper">
+            <ul class="portfolio-buttons list">
+              <li>
+                <button type="button" class="button portfolio-button">
+                  Все
                 </button>
-        
-        
-        
+              </li>
+              <li>
+                <button type="button" class="button portfolio-button">
+                  Веб-сайты
+                </button>
+              </li>
+              <li>
+                <button type="button" class="button portfolio-button">
+                  Приложения
+                </button>
+              </li>
+              <li>
+                <button type="button" class="button portfolio-button">
+                  Дизайн
+                </button>
+              </li>
+              <li>
+                <button type="button" class="button portfolio-button">
+                  Маркетинг
+                </button>
+              </li>
+            </ul>
+          </div>
+          <ul class="works-list list">
+            <li class="works-list__item ">
+              <a href="" class="works-list__link">
+                <div class="image-thumb">
+                  <picture class="works-list__picture">
+                    <source
+                      srcset="
+                        ./images/works/mobile/img-1-mobile-450.webp  1x,
+                        ./images/works/mobile/img-1-mobile-900.webp  2x,
+                        ./images/works/mobile/img-1-mobile-1350.webp 3x
+                      "
+                      media="(min-width: 320px) and (max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/mobile/img-1-mobile-450.jpg  1x,
+                        ./images/works/mobile/img-1-mobile-900.jpg  2x,
+                        ./images/works/mobile/img-1-mobile-1350.jpg 3x
+                      "
+                      media="(min-width: 320px) and (max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/works/tablet/img-1-tablet-354.webp  1x,
+                        ./images/works/tablet/img-1-tablet-708.webp  2x,
+                        ./images/works/tablet/img-1-tablet-1062.webp 3x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/tablet/img-1-tablet-354.jpg  1x,
+                        ./images/works/tablet/img-1-tablet-708.jpg  2x,
+                        ./images/works/tablet/img-1-tablet-1062.jpg 3x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/works/desktop/img-1-desktop-370.webp  1x,
+                        ./images/works/desktop/img-1-desktop-740.webp  2x,
+                        ./images/works/desktop/img-1-desktop-1110.webp 3x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/desktop/img-1-desktop-370.jpg  1x,
+                        ./images/works/desktop/img-1-desktop-740.jpg  2x,
+                        ./images/works/desktop/img-1-desktop-1110.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <img
+                      src="./images/works/mobile/img-1-mobile-450.jpg"
+                      alt="Ноутбук с загруженной веб страницой"
+                    />
+                  </picture>
+                  <p class="overlay">
+                    Технокряк это современная<br />
+                    площадка распространения<br />
+                    коронавируса. Компании<br />
+                    используют эту платформу для<br />
+                    цифрового шпионажа и атак на<br />
+                    защищённые сервера конкурентов.
+                  </p>
+                </div>
+                <div class="works-list__description-wrapper card1">
+                  <h2 class="works-list__title">Технокряк</h2>
+                  <p class="works-list__description">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="works-list__item">
+              <a href="" class="works-list__link">
+                <div class="image-thumb">
+                  <picture class="works-list__picture">
+                    <source
+                      srcset="
+                        ./images/works/mobile/img-2-mobile-450.webp  1x,
+                        ./images/works/mobile/img-2-mobile-900.webp  2x,
+                        ./images/works/mobile/img-2-mobile-1350.webp 3x
+                      "
+                      media="(min-width: 320px) and (max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/mobile/img-2-mobile-450.jpg  1x,
+                        ./images/works/mobile/img-2-mobile-900.jpg  2x,
+                        ./images/works/mobile/img-2-mobile-1350.jpg 3x
+                      "
+                      media="(min-width: 320px) and (max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/works/tablet/img-2-tablet-354.webp  1x,
+                        ./images/works/tablet/img-2-tablet-708.webp  2x,
+                        ./images/works/tablet/img-2-tablet-1062.webp 3x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/tablet/img-2-tablet-354.jpg  1x,
+                        ./images/works/tablet/img-2-tablet-708.jpg  2x,
+                        ./images/works/tablet/img-2-tablet-1062.jpg 3x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/works/desktop/img-2-desktop-370.webp  1x,
+                        ./images/works/desktop/img-2-desktop-740.webp  2x,
+                        ./images/works/desktop/img-2-desktop-1110.webp 3x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/desktop/img-2-desktop-370.jpg  1x,
+                        ./images/works/desktop/img-2-desktop-740.jpg  2x,
+                        ./images/works/desktop/img-2-desktop-1110.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <img
+                      src="./images/works/mobile/img-2-mobile-450.jpg"
+                      alt="Ноутбук с загруженной веб страницой"
+                    />
+                  </picture>
+                  <p class="overlay">
+                    Технокряк это современная<br />
+                    площадка распространения<br />
+                    коронавируса. Компании<br />
+                    используют эту платформу для<br />
+                    цифрового шпионажа и атак на<br />
+                    защищённые сервера конкурентов.
+                  </p>
+                </div>
+                <div class="works-list__description-wrapper">
+                  <h2 class="works-list__title">
+                    Постер New Orlean vs Golden Star
+                  </h2>
+                  <p class="works-list__description">Дизайн</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="works-list__item">
+              <a href="" class="works-list__link">
+                <div class="image-thumb">
+                  <picture class="works-list__picture">
+                    <source
+                      srcset="
+                        ./images/works/mobile/img-3-mobile-450.webp  1x,
+                        ./images/works/mobile/img-3-mobile-900.webp  2x,
+                        ./images/works/mobile/img-3-mobile-1350.webp 3x
+                      "
+                      media="(min-width: 320px) and (max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/mobile/img-3-mobile-450.jpg  1x,
+                        ./images/works/mobile/img-3-mobile-900.jpg  2x,
+                        ./images/works/mobile/img-3-mobile-1350.jpg 3x
+                      "
+                      media="(min-width: 320px) and (max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/works/tablet/img-3-tablet-354.webp  1x,
+                        ./images/works/tablet/img-3-tablet-708.webp  2x,
+                        ./images/works/tablet/img-3-tablet-1062.webp 3x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/tablet/img-3-tablet-354.jpg  1x,
+                        ./images/works/tablet/img-3-tablet-708.jpg  2x,
+                        ./images/works/tablet/img-3-tablet-1062.jpg 3x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/works/desktop/img-3-desktop-370.webp  1x,
+                        ./images/works/desktop/img-3-desktop-740.webp  2x,
+                        ./images/works/desktop/img-3-desktop-1110.webp 3x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/desktop/img-3-desktop-370.jpg  1x,
+                        ./images/works/desktop/img-3-desktop-740.jpg  2x,
+                        ./images/works/desktop/img-3-desktop-1110.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <img
+                      src="./images/works/mobile/img-3-mobile-450.jpg"
+                      alt="Ноутбук с загруженной веб страницой"
+                    />
+                  </picture>
+                  <p class="overlay">
+                    Технокряк это современная<br />
+                    площадка распространения<br />
+                    коронавируса. Компании<br />
+                    используют эту платформу для<br />
+                    цифрового шпионажа и атак на<br />
+                    защищённые сервера конкурентов.
+                  </p>
+                </div>
+                <div class="works-list__description-wrapper">
+                  <h2 class="works-list__title">Ресторан Seafood</h2>
+                  <p class="works-list__description">Приложение</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="works-list__item">
+              <a href="" class="works-list__link">
+                <div class="image-thumb">
+                  <picture class="works-list__picture">
+                    <source
+                      srcset="
+                        ./images/works/mobile/img-4-mobile-450.webp  1x,
+                        ./images/works/mobile/img-4-mobile-900.webp  2x,
+                        ./images/works/mobile/img-4-mobile-1350.webp 3x
+                      "
+                      media="(min-width: 320px) and (max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/mobile/img-4-mobile-450.jpg  1x,
+                        ./images/works/mobile/img-4-mobile-900.jpg  2x,
+                        ./images/works/mobile/img-4-mobile-1350.jpg 3x
+                      "
+                      media="(min-width: 320px) and (max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/works/tablet/img-4-tablet-354.webp  1x,
+                        ./images/works/tablet/img-4-tablet-708.webp  2x,
+                        ./images/works/tablet/img-4-tablet-1062.webp 3x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/tablet/img-4-tablet-354.jpg  1x,
+                        ./images/works/tablet/img-4-tablet-708.jpg  2x,
+                        ./images/works/tablet/img-4-tablet-1062.jpg 3x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/works/desktop/img-4-desktop-370.webp  1x,
+                        ./images/works/desktop/img-4-desktop-740.webp  2x,
+                        ./images/works/desktop/img-4-desktop-1110.webp 3x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/desktop/img-4-desktop-370.jpg  1x,
+                        ./images/works/desktop/img-4-desktop-740.jpg  2x,
+                        ./images/works/desktop/img-4-desktop-1110.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <img
+                      src="./images/works/mobile/img-4-mobile-450.jpg"
+                      alt="Ноутбук с загруженной веб страницой"
+                    />
+                  </picture>
+                  <p class="overlay">
+                    Технокряк это современная<br />
+                    площадка распространения<br />
+                    коронавируса. Компании<br />
+                    используют эту платформу для<br />
+                    цифрового шпионажа и атак на<br />
+                    защищённые сервера конкурентов.
+                  </p>
+                </div>
+                <div class="works-list__description-wrapper">
+                  <h2 class="works-list__title">Проект Prime</h2>
+                  <p class="works-list__description">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="works-list__item">
+              <a href="" class="works-list__link">
+                <div class="image-thumb">
+                  <picture class="works-list__picture">
+                    <source
+                      srcset="
+                        ./images/works/mobile/img-5-mobile-450.webp  1x,
+                        ./images/works/mobile/img-5-mobile-900.webp  2x,
+                        ./images/works/mobile/img-5-mobile-1350.webp 3x
+                      "
+                      media="(min-width: 320px) and (max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/mobile/img-5-mobile-450.jpg  1x,
+                        ./images/works/mobile/img-5-mobile-900.jpg  2x,
+                        ./images/works/mobile/img-5-mobile-1350.jpg 3x
+                      "
+                      media="(min-width: 320px) and (max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/works/tablet/img-5-tablet-354.webp  1x,
+                        ./images/works/tablet/img-5-tablet-708.webp  2x,
+                        ./images/works/tablet/img-5-tablet-1062.webp 3x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/tablet/img-5-tablet-354.jpg  1x,
+                        ./images/works/tablet/img-5-tablet-708.jpg  2x,
+                        ./images/works/tablet/img-5-tablet-1062.jpg 3x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/works/desktop/img-5-desktop-370.webp  1x,
+                        ./images/works/desktop/img-5-desktop-740.webp  2x,
+                        ./images/works/desktop/img-5-desktop-1110.webp 3x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/desktop/img-5-desktop-370.jpg  1x,
+                        ./images/works/desktop/img-5-desktop-740.jpg  2x,
+                        ./images/works/desktop/img-5-desktop-1110.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <img
+                      src="./images/works/mobile/img-5-mobile-450.jpg"
+                      alt="Ноутбук с загруженной веб страницой"
+                    />
+                  </picture>
+                  <p class="overlay">
+                    Технокряк это современная<br />
+                    площадка распространения<br />
+                    коронавируса. Компании<br />
+                    используют эту платформу для<br />
+                    цифрового шпионажа и атак на<br />
+                    защищённые сервера конкурентов.
+                  </p>
+                </div>
+                <div class="works-list__description-wrapper">
+                  <h2 class="works-list__title">Проект Boxes</h2>
+                  <p class="works-list__description">Приложение</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="works-list__item">
+              <a href="" class="works-list__link">
+                <div class="image-thumb">
+                  <picture class="works-list__picture">
+                    <source
+                      srcset="
+                        ./images/works/mobile/img-6-mobile-450.webp  1x,
+                        ./images/works/mobile/img-6-mobile-900.webp  2x,
+                        ./images/works/mobile/img-6-mobile-1350.webp 3x
+                      "
+                      media="(min-width: 320px) and (max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/mobile/img-6-mobile-450.jpg  1x,
+                        ./images/works/mobile/img-6-mobile-900.jpg  2x,
+                        ./images/works/mobile/img-6-mobile-1350.jpg 3x
+                      "
+                      media="(min-width: 320px) and (max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/works/tablet/img-6-tablet-354.webp  1x,
+                        ./images/works/tablet/img-6-tablet-708.webp  2x,
+                        ./images/works/tablet/img-6-tablet-1062.webp 3x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/tablet/img-6-tablet-354.jpg  1x,
+                        ./images/works/tablet/img-6-tablet-708.jpg  2x,
+                        ./images/works/tablet/img-6-tablet-1062.jpg 3x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/works/desktop/img-6-desktop-370.webp  1x,
+                        ./images/works/desktop/img-6-desktop-740.webp  2x,
+                        ./images/works/desktop/img-6-desktop-1110.webp 3x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/desktop/img-6-desktop-370.jpg  1x,
+                        ./images/works/desktop/img-6-desktop-740.jpg  2x,
+                        ./images/works/desktop/img-6-desktop-1110.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <img
+                      src="./images/works/mobile/img-6-mobile-450.jpg"
+                      alt="Ноутбук с загруженной веб страницой"
+                    />
+                  </picture>
+                  <p class="overlay">
+                    Технокряк это современная<br />
+                    площадка распространения<br />
+                    коронавируса. Компании<br />
+                    используют эту платформу для<br />
+                    цифрового шпионажа и атак на<br />
+                    защищённые сервера конкурентов.
+                  </p>
+                </div>
+                <div class="works-list__description-wrapper">
+                  <h2 class="works-list__title">Inspiration has no Borders</h2>
+                  <p class="works-list__description">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="works-list__item">
+              <a href="" class="works-list__link">
+                <div class="image-thumb">
+                  <picture class="works-list__picture">
+                    <source
+                      srcset="
+                        ./images/works/mobile/img-7-mobile-450.webp  1x,
+                        ./images/works/mobile/img-7-mobile-900.webp  2x,
+                        ./images/works/mobile/img-7-mobile-1350.webp 3x
+                      "
+                      media="(min-width: 320px) and (max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/mobile/img-7-mobile-450.jpg  1x,
+                        ./images/works/mobile/img-7-mobile-900.jpg  2x,
+                        ./images/works/mobile/img-7-mobile-1350.jpg 3x
+                      "
+                      media="(min-width: 320px) and (max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/works/tablet/img-7-tablet-354.webp  1x,
+                        ./images/works/tablet/img-7-tablet-708.webp  2x,
+                        ./images/works/tablet/img-7-tablet-1062.webp 3x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/tablet/img-7-tablet-354.jpg  1x,
+                        ./images/works/tablet/img-7-tablet-708.jpg  2x,
+                        ./images/works/tablet/img-7-tablet-1062.jpg 3x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/works/desktop/img-7-desktop-370.webp  1x,
+                        ./images/works/desktop/img-7-desktop-740.webp  2x,
+                        ./images/works/desktop/img-7-desktop-1110.webp 3x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/desktop/img-7-desktop-370.jpg  1x,
+                        ./images/works/desktop/img-7-desktop-740.jpg  2x,
+                        ./images/works/desktop/img-7-desktop-1110.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <img
+                      src="./images/works/mobile/img-7-mobile-450.jpg"
+                      alt="Ноутбук с загруженной веб страницой"
+                    />
+                  </picture>
+                  <p class="overlay">
+                    Технокряк это современная<br />
+                    площадка распространения<br />
+                    коронавируса. Компании<br />
+                    используют эту платформу для<br />
+                    цифрового шпионажа и атак на<br />
+                    защищённые сервера конкурентов.
+                  </p>
+                </div>
+                <div class="works-list__description-wrapper">
+                  <h2 class="works-list__title">Издание Limited Edition</h2>
+                  <p class="works-list__description">Дизайн</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="works-list__item">
+              <a href="" class="works-list__link">
+                <div class="image-thumb">
+                  <picture class="works-list__picture">
+                    <source
+                      srcset="
+                        ./images/works/mobile/img-8-mobile-450.webp  1x,
+                        ./images/works/mobile/img-8-mobile-900.webp  2x,
+                        ./images/works/mobile/img-8-mobile-1350.webp 3x
+                      "
+                      media="(min-width: 320px) and (max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/mobile/img-8-mobile-450.jpg  1x,
+                        ./images/works/mobile/img-8-mobile-900.jpg  2x,
+                        ./images/works/mobile/img-8-mobile-1350.jpg 3x
+                      "
+                      media="(min-width: 320px) and (max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/works/tablet/img-8-tablet-354.webp  1x,
+                        ./images/works/tablet/img-8-tablet-708.webp  2x,
+                        ./images/works/tablet/img-8-tablet-1062.webp 3x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/tablet/img-8-tablet-354.jpg  1x,
+                        ./images/works/tablet/img-8-tablet-708.jpg  2x,
+                        ./images/works/tablet/img-8-tablet-1062.jpg 3x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/works/desktop/img-8-desktop-370.webp  1x,
+                        ./images/works/desktop/img-8-desktop-740.webp  2x,
+                        ./images/works/desktop/img-8-desktop-1110.webp 3x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/desktop/img-8-desktop-370.jpg  1x,
+                        ./images/works/desktop/img-8-desktop-740.jpg  2x,
+                        ./images/works/desktop/img-8-desktop-1110.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <img
+                      src="./images/works/mobile/img-8-mobile-450.jpg"
+                      alt="Ноутбук с загруженной веб страницой"
+                    />
+                  </picture>
+                  <p class="overlay">
+                    Технокряк это современная<br />
+                    площадка распространения<br />
+                    коронавируса. Компании<br />
+                    используют эту платформу для<br />
+                    цифрового шпионажа и атак на<br />
+                    защищённые сервера конкурентов.
+                  </p>
+                </div>
+                <div class="works-list__description-wrapper">
+                  <h2 class="works-list__title">Проект LAB</h2>
+                  <p class="works-list__description">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="works-list__item">
+              <a href="" class="works-list__link">
+                <div class="image-thumb">
+                  <picture class="works-list__picture">
+                    <source
+                      srcset="
+                        ./images/works/mobile/img-9-mobile-450.webp  1x,
+                        ./images/works/mobile/img-9-mobile-900.webp  2x,
+                        ./images/works/mobile/img-9-mobile-1350.webp 3x
+                      "
+                      media="(min-width: 320px) and (max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/mobile/img-9-mobile-450.jpg  1x,
+                        ./images/works/mobile/img-9-mobile-900.jpg  2x,
+                        ./images/works/mobile/img-9-mobile-1350.jpg 3x
+                      "
+                      media="(min-width: 320px) and (max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/works/tablet/img-9-tablet-354.webp  1x,
+                        ./images/works/tablet/img-9-tablet-708.webp  2x,
+                        ./images/works/tablet/img-9-tablet-1062.webp 3x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/tablet/img-9-tablet-354.jpg  1x,
+                        ./images/works/tablet/img-9-tablet-708.jpg  2x,
+                        ./images/works/tablet/img-9-tablet-1062.jpg 3x
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/works/desktop/img-9-desktop-370.webp  1x,
+                        ./images/works/desktop/img-9-desktop-740.webp  2x,
+                        ./images/works/desktop/img-9-desktop-1110.webp 3x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/works/desktop/img-9-desktop-370.jpg  1x,
+                        ./images/works/desktop/img-9-desktop-740.jpg  2x,
+                        ./images/works/desktop/img-9-desktop-1110.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <img
+                      src="./images/works/mobile/img-9-mobile-450.jpg"
+                      alt="Ноутбук с загруженной веб страницой"
+                    />
+                  </picture>
+                  <p class="overlay">
+                    Технокряк это современная<br />
+                    площадка распространения<br />
+                    коронавируса. Компании<br />
+                    используют эту платформу для<br />
+                    цифрового шпионажа и атак на<br />
+                    защищённые сервера конкурентов.
+                  </p>
+                </div>
+                <div class="works-list__description-wrapper">
+                  <h2 class="works-list__title">Growing Business</h2>
+                  <p class="works-list__description">Приложение</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-wrapper container">
+        <div class="footer__left-side">
+          <div class="footer__address-side">
+            <a href="./index.html" lang="en" class="logo footer-logo link"
+              ><span>Web</span>Studio</a
+            >
+            <address class="footer-address">
+              г. Киев, пр-т Леси Украинки, 26
+            </address>
+            <address class="footer-contacts">
+              <a class="footer-contacts__title" href="mailto:info@example.com"
+                >info@example.com</a
+              >
+              <a class="footer-contacts__title" href="tel:+380991111111"
+                >+38 099 111 11 11</a
+              >
+            </address>
+          </div>
+
+          <div class="footer-social">
+            <p class="footer-social__description">присоединяйтесь</p>
+            <ul class="footer-social-list list">
+              <li class="footer-social-list__item">
+                <a class="footer-social-list__link" href="">
+                  <svg class="footer-social-list__icon" width="20" height="20">
+                    <use href="./images/icons/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-list__item">
+                <a class="footer-social-list__link" href="">
+                  <svg class="footer-social-list__icon" width="20" height="20">
+                    <use href="./images/icons/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-list__item">
+                <a class="footer-social-list__link" href="">
+                  <svg class="footer-social-list__icon" width="20" height="20">
+                    <use href="./images/icons/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-list__item">
+                <a class="footer-social-list__link" href="">
+                  <svg class="footer-social-list__icon" width="20" height="20">
+                    <use href="./images/icons/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
+        <form action="" class="footer-form js-speaker-form">
+          <div class="footer-form__form-field">
+            <label class="footer-form__label" for="subscribe"
+              >Подпишитесь на рассылку</label
+            >
+            <input
+              class="footer-form__input"
+              type="email"
+              name="subscribe"
+              id="subscribe"
+              placeholder="E-mail"
+            />
+          </div>
 
-    </div>
-</footer>
-
-
-</body>
-
+          <button type="submit" class="button footer-form__button">
+            Подписаться
+            <svg class="footer-form__icon" width="24" height="24">
+              <use href="./images/icons/sprite.svg#form-send"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </footer>
+    <script src="./js/menu.js"></script>
+    <script src="./js/form.js"></script>
+  </body>
 </html>
-
-
-

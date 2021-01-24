@@ -1,54 +1,41 @@
 body {
-  background-color: var(--primary-bg-color);
-  color: var(--primary-text-color);
-  font-family: $main-font, sans-serif;
+  color: var(--title-text-color);
+  background-color: var(--primary-white-color);
+  font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
-  outline: 2px solid black;
-  margin: auto;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-p {
+ul,
+ol {
+  padding: 0;
   margin: 0;
 }
 
-textarea {
-  resize: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 .list {
   list-style: none;
-  margin: 0px;
-  padding: 0px;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.site-nav .link,
-.header-adress .adress-link,
-.nav-svg,
-.social-link-team,
-.client-link,
-.footer-contact-adress,
-.footer-contact,
-.social-link,
-.port-button {
-  transition: color var(--timing-duration) var(--timing-function),
-    fill var(--timing-duration) var(--timing-function),
-    background-color var(--timing-duration) var(--timing-function),
-    border-color var(--timing-duration) var(--timing-function);
 }
